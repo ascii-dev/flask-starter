@@ -10,6 +10,8 @@ flask-sqlalchemy = "*"
 flask-migrate = "*"
 python-dotenv = "*"
 pytest = "*"
+flask-script = "*"
+"psycopg2" = "*"
 
 [dev-packages]
 

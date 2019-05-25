@@ -49,6 +49,7 @@ class TestingConfig(Config):
     SQLALCHEMY_DATABASE_URI = getenv(
         'TEST_DATABASE_URI',
         'postgresql://localhost/flight_booking_test')
+    API_BASE_URL = getenv('API_BASE_URL', '/api/v1')
 
 
 config = {

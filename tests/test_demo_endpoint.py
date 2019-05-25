@@ -17,7 +17,7 @@ class TestDemoEndpoint:
         """
         response = client.get(
             f'{BASE_URL}/demo')
-        response_data = json.loads(response.data.decode(CHARSET))['data']
+        response_data = json.loads(response.data.decode(CHARSET))
 
         assert response.status_code == 200
         assert type(response_data) == dict
