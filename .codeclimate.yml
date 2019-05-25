@@ -1,0 +1,6 @@
+version: "2"
+plugins:
+  pep8:
+    enabled: false
+exclude_patterns:
+  - "tests/"

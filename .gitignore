@@ -104,3 +104,8 @@ venv.bak/
 .mypy_cache/
 
 .idea/
+
+.coverage
+htmlcov/
+.pytest_cache
+coverage.xml
