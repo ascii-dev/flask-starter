@@ -6,7 +6,8 @@ from os import environ
 import pytest
 from flask import current_app
 
-from alembic import config, command
+import alembic.config
+import alembic.command
 
 from sqlalchemy.engine import reflection
 from sqlalchemy.schema import (
