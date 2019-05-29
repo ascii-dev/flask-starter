@@ -21,6 +21,7 @@ class BaseModel(db.Model):  # pragma: no cover
         """
         db.session.add(self)
         db.session.commit()
+        return self
 
     def update(self, **kwargs):
         """

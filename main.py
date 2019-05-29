@@ -24,7 +24,6 @@ def create_app(config=AppConfig):
     db.init_app(app)
 
     import api.models
-    # import pdb; pdb.set_trace()
     import api.views
 
     # initialize migration scripts

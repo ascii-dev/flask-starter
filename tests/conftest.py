@@ -25,6 +25,10 @@ from api.models.database import db
 
 environ['FLASK_ENV'] = 'testing'
 
+pytest_plugins = [
+    "tests.fixtures.user",
+]
+
 
 def db_drop_all(db):
     # From http://www.sqlalchemy.org/trac/wiki/UsageRecipes/DropEverything
@@ -65,6 +69,14 @@ def db_drop_all(db):
     trans.commit()
 
     db.engine.execute("DROP TABLE IF EXISTS alembic_version CASCADE")
+
+    sequences = [
+        'userroleenum',
+    ]
+
+    sequences_ = ','.join(sequences)
+    sql = f'DROP TYPE IF EXISTS {sequences_} CASCADE'
+    db.engine.execute(sql)
 
 
 @pytest.yield_fixture(scope='session')
@@ -109,7 +121,7 @@ def init_db(app):
     db.drop_all()
     db.create_all()
     yield db
-    db.sessioon.close()
+    db.session.close()
     db.drop_all()
 
 

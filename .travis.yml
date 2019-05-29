@@ -1,11 +1,16 @@
 language: python
+
 python:
   - "3.7"
+
+services:
+  - postgresql
 
 before_script:
   - pip install pipenv
   - pipenv install
   - pipenv install coverage
+  - psql -c 'CREATE DATABASE travis_ci_test;' -U postgres
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build

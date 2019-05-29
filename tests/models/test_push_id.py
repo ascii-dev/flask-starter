@@ -41,8 +41,8 @@ class TestPushIdGenerator:
         """
         Should test that save_push_id returns a push ID
         """
-        PushID.next_id = Mock(return_value=1234)
+        PushID.next_id = Mock(return_value='-LdJYKRbU2cb6HXNGDRP')
         mapper = connection = target = Mock()
         target.configure_mock(id='')
         save_push_id(mapper, connection, target)
-        assert target.id == 1234
+        assert target.id == '-LdJYKRbU2cb6HXNGDRP'
