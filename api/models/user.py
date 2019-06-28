@@ -1,7 +1,6 @@
 from sqlalchemy.event import listens_for
 from werkzeug.security import generate_password_hash
 from .database import db
-from ..utilities.enums import UserRoleEnum
 from .base.base_model import BaseModel
 
 
@@ -14,8 +13,6 @@ class User(BaseModel):
     last_name = db.Column(db.String(60), nullable=False)
     email = db.Column(db.String(250), unique=True, nullable=False)
     password = db.Column(db.String(250), nullable=False)
-    role = db.Column(db.Enum(UserRoleEnum), nullable=False, default='user')
-    passport_photograph = db.Column(db.String)
 
     def __repr__(self):
         return f'<User {self.first_name} {self.last_name}>'

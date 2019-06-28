@@ -25,9 +25,7 @@ from api.models.database import db
 
 environ['FLASK_ENV'] = 'testing'
 
-pytest_plugins = [
-    "tests.fixtures.user",
-]
+pytest_plugins = []
 
 
 def db_drop_all(db):
@@ -70,9 +68,7 @@ def db_drop_all(db):
 
     db.engine.execute("DROP TABLE IF EXISTS alembic_version CASCADE")
 
-    sequences = [
-        'userroleenum',
-    ]
+    sequences = []
 
     sequences_ = ','.join(sequences)
     sql = f'DROP TYPE IF EXISTS {sequences_} CASCADE'

@@ -1,6 +1,5 @@
 from unittest.mock import patch, Mock
 from api.models.base.push_id import PushID
-from api.models import save_push_id
 
 
 class TestPushIdGenerator:
@@ -36,13 +35,3 @@ class TestPushIdGenerator:
         push_id.set_last_rand_char(True)
         push_id.get_previous_rand_char()
         assert push_id.last_rand_chars[-1] == push_id.last_rand_chars[-1]
-
-    def test_save_push_id(self):
-        """
-        Should test that save_push_id returns a push ID
-        """
-        PushID.next_id = Mock(return_value='-LdJYKRbU2cb6HXNGDRP')
-        mapper = connection = target = Mock()
-        target.configure_mock(id='')
-        save_push_id(mapper, connection, target)
-        assert target.id == '-LdJYKRbU2cb6HXNGDRP'
