@@ -25,9 +25,7 @@ from api.models.database import db
 
 environ['FLASK_ENV'] = 'testing'
 
-pytest_plugins = [
-    "tests.fixtures.user",
-]
+pytest_plugins = []
 
 
 def db_drop_all(db):
