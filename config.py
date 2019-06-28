@@ -19,7 +19,7 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_DATABASE_URI = getenv(
         'DATABASE_URI',
-        'postgresql://localhost/flight_booking')
+        'no db')
 
 
 class StagingConfig(Config):
@@ -48,7 +48,7 @@ class TestingConfig(Config):
     FLASK_ENV = 'testing'
     SQLALCHEMY_DATABASE_URI = getenv(
         'TEST_DATABASE_URI',
-        'postgresql://localhost/flight_booking_test')
+        'no db')
     API_BASE_URL = getenv('API_BASE_URL', '/api/v1')
 
 
