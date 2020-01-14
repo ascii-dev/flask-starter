@@ -4,16 +4,22 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-flask = "*"
-flask-restplus = "*"
-flask-sqlalchemy = "*"
-flask-migrate = "*"
-python-dotenv = "*"
-pytest = "*"
-flask-script = "*"
-"psycopg2" = "*"
-pytest-cov = "*"
-numpy = "*"
+flask = "==1.0.3"
+flask-restplus = "==0.12.1"
+flask-sqlalchemy = "==2.4.0"
+flask-migrate = "==2.5.2"
+python-dotenv = "==0.10.3"
+pytest = "==4.6.3"
+flask-script = "==2.0.6"
+"psycopg2" = "<2.8"
+pytest-cov = "==2.7.1"
+flask-marshmallow = "==0.10.1"
+numpy = "==1.16.4"
+flask-jwt-extended = "==3.18.2"
+marshmallow = "==2.19.5"
+flask-cors = "*"
+gunicorn = "*"
+
 
 [dev-packages]
 
