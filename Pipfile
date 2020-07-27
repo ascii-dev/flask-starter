@@ -20,8 +20,8 @@ marshmallow = "==2.19.5"
 flask-cors = "*"
 gunicorn = "*"
 
-
 [dev-packages]
+pylint = "*"
 
 [requires]
 python_version = "3.7"
