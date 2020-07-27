@@ -1,6 +1,6 @@
 """Module for demo use"""
 
-from flask_restplus import Resource
+from flask_restx import Resource
 
 from main import api
 
