@@ -1,5 +1,5 @@
 {
   "python.linting.pylintEnabled": true,
-  "python.pythonPath": "venv/bin/python",
+  "python.pythonPath": "/Users/asciidev/.local/share/virtualenvs/flask-starter-_n7PhTWq/bin/python",
   "editor.tabSize": 4
 }
